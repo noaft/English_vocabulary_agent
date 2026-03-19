@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Vocabulary Agent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎓 English Vocabulary Agent</h1>
+    <p>Submit a vocabulary list and let the AI agents teach you!</p>
+  </header>
+
+  <main>
+    <!-- Input Section -->
+    <section class="card" id="input-section">
+      <h2>📝 Enter Vocabulary Words</h2>
+      <p class="hint">Enter one word per line, or separate words with commas.</p>
+      <textarea
+        id="word-input"
+        rows="6"
+        placeholder="e.g.&#10;happy&#10;sad&#10;curious&#10;ambitious"
+      ></textarea>
+      <div class="actions">
+        <button id="btn-process" class="btn-primary">🚀 Process All</button>
+        <button id="btn-vocab" class="btn-secondary">📖 Vocabulary Only</button>
+        <button id="btn-homework" class="btn-secondary">📚 Homework Only</button>
+      </div>
+    </section>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Agents are working… please wait</p>
+    </div>
+
+    <!-- Error Banner -->
+    <div id="error-banner" class="hidden error-banner"></div>
+
+    <!-- Vocabulary Output -->
+    <section class="card hidden" id="vocab-section">
+      <h2>📖 Vocabulary Results</h2>
+      <div id="vocab-output"></div>
+    </section>
+
+    <!-- Homework Output -->
+    <section class="card hidden" id="homework-section">
+      <h2>📚 Homework Assignment</h2>
+      <div id="homework-output"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by LLM agents · <a href="/health" target="_blank">API health</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
